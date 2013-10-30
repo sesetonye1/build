@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns= "http:apache.org/cordovas/ns/plugins/1.0" id="jquery.kuo.pluginclass.echo" version="0.2.3">
+
+	<name>Echo</name>
+
+	<description>Salford Echo Plugin</description>
+
+	<license>Apache 2.0</license>
+
+	<keywords> Salford, test, echo</keywords>
+
+	<js-module src="www/echo.js" name="Echo">
+		<clobbers target="navigator.echo"/>
+	</js-module>
+
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name= "Echo">
+				<param name="android-package" value="jquery.kuo.pluginclass.echo.Echo"/>
+			</feature>
+		</config-file>
+		<source-file src="src/android/Echo.java" target-dir="src/jquery/kuo/pluginclass/echo"/>
+	</platform>
+</plugin>
